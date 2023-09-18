@@ -1,14 +1,17 @@
-let count=0;
 let saveEl = document.getElementById("save-el")
-function increment()
-{
- count=count+1
- document.getElementById("count").innerText=count
+let countEl = document.getElementById("count-el")
+let count = 0
+
+function increment() {
+    count += 1
+    countEl.textContent = count
 }
-function save()
-{
- let saved=count+" - "
- saveEl.textContent+=saved
- count=0
- document.getElementById("count").innerText=count
+
+function save() {
+    let countStr = count + " - "
+    saveEl.textContent += countStr
+    countEl.textContent = 0
+    count = 0
 }
+
+
